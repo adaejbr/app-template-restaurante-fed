@@ -1,7 +1,8 @@
+import { Input } from "../components/forms/Input";
+
 function DesignSystemPage() {
     return (
-        <div className="min-h-screen bg-background text-text-primary p-8">
-      <div className="max-w-4xl mx-auto space-y-12">
+        <>
         <header className="text-center space-y-4">
           <h1 className="text-display-xl text-primary-500">App Restaurante ADA EJ</h1>
           <p className="text-body-lg text-text-secondary">
@@ -118,17 +119,10 @@ function DesignSystemPage() {
             <div className="bg-background-secondary rounded-lg p-6 space-y-4 border border-background-tertiary">
               <h3 className="text-heading-md">Inputs</h3>
               <div className="space-y-3">
-                <input 
-                  type="text" 
-                  placeholder="Input padrão" 
-                  className="w-full px-3 py-2 bg-background-tertiary border border-background-hover rounded-md text-text-primary placeholder-text-muted focus-ring outline-none transition-colors"
-                />
-                <input 
-                  type="text" 
-                  placeholder="Input com erro" 
-                  className="w-full px-3 py-2 bg-background-tertiary border-2 border-error rounded-md text-text-primary placeholder-text-muted focus:ring-2 focus:ring-error/40 outline-none transition-colors"
-                  aria-invalid="true"
-                />
+                <Input placeholder="Input padrão" />
+                
+                <Input placeholder="Input com erro" error="Este é um erro de validação" />
+                
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" className="w-4 h-4 rounded border-background-tertiary bg-background-tertiary text-primary-500 focus:ring-primary-500" />
                   <span className="text-body-md text-text-primary">Checkbox</span>
@@ -178,8 +172,7 @@ function DesignSystemPage() {
             ))}
           </div>
         </section>
-      </div>
-    </div>
+    </>
     )
 }
 
