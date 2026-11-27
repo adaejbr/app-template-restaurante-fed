@@ -1,5 +1,7 @@
 # Plano de Desenvolvimento Front-end - App Restaurante ADA EJ
 
+[Voltar](../DOCUMENTACAO.md)
+ 
 ## 📋 Visão Geral
 
 Este documento detalha o planejamento para configurar a base do projeto React que será utilizada por uma equipe de **15 desenvolvedores** divididos em múltiplas squads. O objetivo é entregar uma **fundação sólida** com arquitetura, design system, padrões de código e ferramentas configuradas para que as equipes foquem exclusivamente na criação de **components, hooks e pages**.
