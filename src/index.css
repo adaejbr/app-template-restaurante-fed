@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-background text-text-primary min-h-screen;
+  margin: 0;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display font-semibold text-text-primary;
+}
+
+h1 {
+  @apply text-display-xl;
+}
+h2 {
+  @apply text-display-lg;
+}
+h3 {
+  @apply text-display-md;
+}
+h4 {
+  @apply text-heading-xl;
+}
+h5 {
+  @apply text-heading-lg;
+}
+h6 {
+  @apply text-heading-md;
+}
+
+p {
+  @apply text-body-md;
+}
+small {
+  @apply text-caption;
+}
+
+code {
+  @apply font-mono text-sm bg-background-tertiary px-1.5 py-0.5 rounded-sm;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+.focus-ring-secondary {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
