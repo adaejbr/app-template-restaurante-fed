@@ -20,6 +20,7 @@ Na aplicação, use também a rota [`/documentacao`](http://localhost:5173/docum
 | Login | Protótipo implementado | Formulário com validação existe; fluxo com API ainda depende do back-end |
 | Autenticação | Protótipo implementado | Estado persistido com Zustand e envio de token no Axios |
 | Roteamento | Base implementada | Páginas de login e design system; proteção de rota preparada |
+| Dados mockados | Base implementada | Fixtures e operações locais compartilhadas em `src/data/mock/` |
 | Mapa de mesas | Não implementado | Existe apenas no protótipo |
 | Comandas e pedidos | Não implementados | Requisitos e protótipos estão documentados |
 | Estoque | Não implementado | Identidade visual e estados estão definidos |
@@ -119,6 +120,14 @@ VITE_API_URL=http://localhost:3000
 
 Não envie arquivos `.env` com credenciais para o repositório.
 
+## Dados mockados do MVP
+
+Edite categorias, produtos, mesas, clientes, formas de pagamento, comandas e pedidos em `src/data/mock/fixtures.ts`. Os produtos usam a imagem local `public/images/mock/product-placeholder.svg`; substitua o caminho na fixture para usar outra imagem local.
+
+Use `useRestaurantStore` de `src/data/mock` para ler e alterar os dados compartilhados. As operações cobrem abertura e fechamento de comandas, pedidos, status e cancelamentos. Os seletores em `src/data/mock/selectors.ts` calculam totais, contagem de comandas, estados de mesa e disponibilidade de estoque.
+
+O estado é compartilhado durante a sessão e não é persistido. `resetDemoData()` restaura as fixtures. Essa camada não faz chamadas HTTP e não substitui nem integra as telas operacionais, ainda não implementadas.
+
 ## Estrutura principal
 
 ```text
@@ -127,6 +136,8 @@ src/
 │   ├── api/          # Configuração do Axios e da comunicação HTTP
 │   ├── stores/       # Estado compartilhado com Zustand
 │   └── types/        # Tipos compartilhados
+├── data/
+│   └── mock/          # Fixtures, estado local e seletores do MVP
 ├── presentation/
 │   ├── components/   # Botões, inputs e componentes visuais
 │   └── pages/        # Páginas da aplicação
